@@ -14,7 +14,10 @@ public class Gerente extends Funcionario {
 		}
 	}
 	
-//	public double getBonificacao() {
-//		return this.salario;
-//	}
+	public double getBonificacao() {
+		// super referencia o atributo na classe mãe/pai
+		// classe gerente é filho da classe funcionário
+		System.out.println("Bonificacao do Gerente");
+		return super.getBonificacao() + super.getSalario();  
+	}
 }
