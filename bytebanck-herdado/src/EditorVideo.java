@@ -5,6 +5,7 @@ public class EditorVideo extends Funcionario {
 		// super referencia o atributo na classe mãe/pai
 		// classe gerente é filho da classe funcionário
 		System.out.println("Metodo: Bonificacao do Editor de Video");
-		return super.getBonificacao() + 100;  
+		return 150;
+		//return super.getBonificacao() + 100;  
 	}
 }
