@@ -11,11 +11,15 @@ public class TestaCurso {
 		List<Aula> aulas = javaColecoes.getAulas();
 		System.out.println(aulas);
 		
-		aulas.add(new Aula("Trabalho com ArrayList", 21));
+//		javaColecoes.getAulas().add(new Aula("Trabalho com ArrayList", 21));
+		javaColecoes.adiciona(new Aula("Trabalho com ArrayList", 21));
+		javaColecoes.adiciona(new Aula("Criando nova aula", 20));
+		javaColecoes.adiciona(new Aula("Modelando com collections", 22));
 		
-		System.out.println(aulas);
+//		System.out.println(aulas);
 		
 		System.out.println(javaColecoes.getAulas());
+//		System.out.println(aulas == javaColecoes.getAulas());
 	}
 
 }
