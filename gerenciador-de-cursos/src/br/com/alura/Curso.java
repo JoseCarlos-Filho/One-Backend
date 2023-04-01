@@ -3,6 +3,7 @@ package br.com.alura;
 //import java.util.*;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
@@ -12,7 +13,7 @@ public class Curso {
 	private String nome;
 	private String instrutor;
 	private List<Aula> aulas = new LinkedList<Aula>();
-	private Set<Aluno> alunos = new HashSet<>();
+	private Set<Aluno> alunos = new LinkedHashSet<>();
 
 	public Curso(String nome, String instrutor) {
 		this.nome = nome;
@@ -51,8 +52,14 @@ public class Curso {
 	public void matricula(Aluno aluno) {
 		this.alunos.add(aluno);
 	}
-	
+
 	public Set<Aluno> getAlunos() {
 		return Collections.unmodifiableSet(alunos);
 	}
+
+	public boolean estaMatriculado(Aluno aluno) {
+		return this.alunos.contains(aluno);
+	}
+	
+	
 }
