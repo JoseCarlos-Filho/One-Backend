@@ -8,6 +8,7 @@ import javax.persistence.EntityManager;
 import loja.dao.CategoriaDAO;
 import loja.dao.ProdutoDAO;
 import loja.modelo.Categoria;
+import loja.modelo.CategoriaId;
 import loja.modelo.Produto;
 import loja.util.JPAUtil;
 
@@ -26,6 +27,9 @@ public class CadastroDeProduto {
 		
 		BigDecimal precoDoProduto = produtoDao.buscarPrecoDoProdutoComNome("Samsung");
 		System.out.println("Preço do produto : " + precoDoProduto);
+		
+		//mapeamento de chave composta
+		em.find(Categoria.class, new CategoriaId("Celulares", "xpto"));
 	}
 
 	private static void cadastrarProduto() {
